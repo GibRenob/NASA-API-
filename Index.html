@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html ng-app ='Meteorite'>
+
+<head>
+  <title>Meteorite Activity Tracker</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.js"></script>
+  <!-- API Key to google maps -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAYndsXbC9aOZvITujV4aht74QHuHjNRZA&callback=initMap"
+  async defer></script>
+  <!-- end of Google Maps -->
+  <script src="map.js"></script>
+  <script src="app.js"></script>
+  <link rel="stylesheet" type="text/css" href="main.css">
+
+  <!-- start of Google Maps (this script is now in map.js) -->
+  <!-- <script>
+    var map;
+    function initMap() {
+      map = new google.maps.Map(document.getElementById('map'), {qq
+        center: {lat: 40.518, lng: -90.672},
+        zoom: 2,
+          mapTypeId: google.maps.MapTypeId.SATELLITE
+        });
+        map.setTilt(45);
+      } -->
+  <!-- </script> -->
+  <!-- API Key to google maps -->
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAYndsXbC9aOZvITujV4aht74QHuHjNRZA&callback=initMap"
+  async defer></script> -->
+  <!-- end of Google Maps -->
+
+  <!-- background is image  -->
+<body ng-controller = 'meteoriteCtrl as mCtrl'
+background ='https://myoshinovel.files.wordpress.com/2013/03/asteroid_heating_earth_iphone_5_backgrounds-hd.jpg'
+	<div class= "container">
+      <p> Meteorite Landing Activty Tracker <p>
+        <h2> This tracker will illustrate Meteorite Landings around
+        </br> the world through the years 1880 to Present </h2>
+        <!-- {{mCtrl.test}} to test the connection of the controller -->
+		<nav>
+			<ul>
+
+				<li class="active" ng-click= "mCtrl.yearRange()">Enter Year Range<br>
+        <input placeholder= 'xxxx-xxxx' ng-model="mCtrl.year"></input</li>
+        <FORM>
+          <INPUT TYPE="button" onClick="response.data" VALUE="Enter">
+        </FORM>
+        <FORM>
+          <INPUT TYPE="button" onClick="history.go(0)" VALUE="Refresh">
+        </FORM>
+
+
+				<!-- <li ng-click= "mCtrl.locLanded()">Location Landed<br>
+        <input  ng-model="mCtrl.locLanded"></input> -->
+
+				 <!-- <li ng-click= "mCtrl.metName()">Meteorite Name<br>
+        <input ng-model="mCtrl.Name"></input>
+        <FORM>
+          <INPUT TYPE="button" onClick="response.data" VALUE="Enter">
+        </FORM>ß
+        <FORM>
+          <INPUT TYPE="button" onClick="history.go(0)" VALUE="Refresh">
+        </FORM> -->
+
+        <!-- <li ng-click = "mCtrl.metMass()">Meteorite Mass</li> -->
+
+      </ul>
+
+      <!-- <input ng-model="mCtrl.loc"></input> -->
+
+		</nav>
+<!-- id of Map in center of browser-->
+  	<div class="img-main" id = 'map'>
+      <!-- <img src="http://il2.picdn.net/shutterstock/videos/7730632/thumb/1.jpg"> -->
+    </div>
+
+</body>
+
+</html>
